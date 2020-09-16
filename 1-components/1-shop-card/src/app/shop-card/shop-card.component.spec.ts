@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { EventEmitter } from '@angular/core';
 import { cartProduct } from '../../../../../shared/mocks/1-components/cart-product';
 
-describe('[Moдуль 1 -  Компонент товара в корзин]', () => {
+describe('[Модуль 1 -  Компонент товара в корзине]', () => {
   let fixture: ComponentFixture<ShopCardComponent>;
   let component: ShopCardComponent;
   beforeEach(() => {
@@ -26,7 +26,7 @@ describe('[Moдуль 1 -  Компонент товара в корзин]', ()
     expect((component as any).product).toBeDefined();
   });
 
-  it('компонент должен иметь cобственное событие increment ', () => {
+  it('компонент должен иметь собственное событие increment ', () => {
     expect((component as any).increment).toBeTruthy();
     expect((component as any).increment).toBeInstanceOf(EventEmitter);
   });
@@ -40,7 +40,7 @@ describe('[Moдуль 1 -  Компонент товара в корзин]', ()
     expect((component as any).increment).toBeInstanceOf(EventEmitter);
   });
 
-  it('при нажатии на кнопку с селектором .increment должен вызываться метод  incrementProductInCart и срабатывать собстевнное событие increment', () => {
+  fit('при нажатии на кнопку с селектором .increment должен вызываться метод  incrementProductInCart и срабатывать собстевнное событие increment', () => {
     spyOn(component as any, 'incrementProductInCart').and.callThrough();
     spyOn((component as any)?.increment, 'emit').and.callThrough();
     const incrementButton = fixture.debugElement.query(
