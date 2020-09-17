@@ -8,14 +8,16 @@ import {ICartProduct} from '../../../../../shared/mocks/1-components/cart-produc
 
 export class ShopCardComponent {
   @Input()
-  product = {};
+  product: ICartProduct | any = {};
 
   @Output()
   increment = new EventEmitter<void>();
   @Output()
   decrement = new EventEmitter<void>();
 
-  public decrementProductInCart() {}
+  public decrementProductInCart() {
+    this.decrement.emit();
+  }
   public incrementProductInCart() {
     this.increment.emit();
   }
