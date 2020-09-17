@@ -39,7 +39,7 @@ describe('[Moдуль 1]  Компонент рекомендуемого тов
       expect((component as any)?.goToProduct.emit).toHaveBeenCalledTimes(1);
     });
 
-  it('тег c селекторор [.card-img-wrap img] должен иметь правильное связывание свойств src и alt', () => {
+  it('тег c селектором [.card-img-wrap img] должен иметь правильное связывание свойств src и alt', () => {
     (component as any).product = oneProduct;
     fixture.detectChanges();
     const imgEl = fixture.debugElement.query(By.css('.card-img-wrap img'));
