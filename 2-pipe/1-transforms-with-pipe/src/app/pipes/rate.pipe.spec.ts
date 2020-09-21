@@ -17,6 +17,6 @@ describe('[Moдуль 2 Rate pipe]', () => {
   it('Если дробная часть значение к которому применяется pipe >= 0.75 то значение должно округляться до целого числа вверх ', () => {
     expect(ratePipe.transform(1.25)).toEqual(1.5);
     expect(ratePipe.transform(1.74)).toEqual(1.5);
-    expect(ratePipe.transform(1.4)).toEqual(1.5);
+    expect(ratePipe.transform(1.8)).toEqual(2);
   });
 });

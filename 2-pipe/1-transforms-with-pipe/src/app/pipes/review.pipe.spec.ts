@@ -24,7 +24,7 @@ describe('[Moдуль 2 review pipe]', () => {
     expect(reviewPipe.transform(111)).toEqual('111 отзывов');
   });
 
-  it('Eсли значение к которому применяется pipe число которое заканичвается на 11-14  pipe должен возвращать "${count} отзывов"', () => {
+  it('Eсли значение к которому применяется pipe число которое заканичвается на 5  pipe должен возвращать "${count} отзывов"', () => {
     expect(reviewPipe.transform(5)).toEqual('5 отзывов');
     expect(reviewPipe.transform(15)).toEqual('15 отзывов');
     expect(reviewPipe.transform(25)).toEqual('25 отзывов');
